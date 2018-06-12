@@ -1,1 +1,1 @@
-include ':GlideDemo'
+include ':GlideDemo', ':ServiceDemo'
