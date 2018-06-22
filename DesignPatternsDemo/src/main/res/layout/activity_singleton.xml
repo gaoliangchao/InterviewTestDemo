@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/activity_singleton"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gavin.glc.component.designpatternsdemo.SingletonPattern.SingletonActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fcb"
+                android:textSize="15dp"
+                android:text="推荐\r\n
+                单例设计模式————饿汉式\r\n
+空间换时间
+\r\n
+优点：保证在第一次加载时实例被创建，线程安全\r\n
+缺点：无法延迟加载\r\n
+public class SingletonOne {\r\n
+\r\n
+    //创建本类静态实例对象\r\n
+    private static SingletonOne s = new SingletonOne();\r\n
+
+    //私有构造方法\r\n
+    private SingletonOne() {}\r\n
+
+    //对外提供公共的访问实例的方法\r\n
+    public static SingletonOne getInstance() {\r\n
+        return singletonOne;\r\n
+    }\r\n
+}
+"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffd"
+                android:textSize="15dp"
+                android:text="单例设计模式————懒汉式\r\n
+时间换空间\r\n
+优点：延迟加载，有效的防止的资源的消耗\r\n
+缺点：线程不安全，第一次加载时速度比较缓慢\r\n
+
+public class SingletonTwo {\r\n
+\r\n
+    //创建本类对象静态引用\r\n
+    private static SingletonTwo s;\r\n
+
+    //私有构造方法\r\n
+    private SingletonTwo() {}\r\n
+
+    //对外提供本类实例的公共访问方式\r\n
+    public static SingletonTwo getInstance() {\r\n
+        if (s == null) {\r\n
+            s = new SingletonTwo();\r\n
+        }\r\n
+        return s;\r\n
+    }\r\n
+}
+"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f9d"
+                android:textSize="15dp"
+                android:text="DCL(Double Check Lock) 双重锁单例模式\r\n
+优点：进一步优化了懒汉模式 修复了线程不安全的问题\r\n
+缺点：在极端情况下还是会有线程不安全的问题\r\n
+\r\n
+public class SingletonThree {\r\n
+\r\n
+    private static SingletonThree s;\r\n
+\r\n
+    private SingletonThree() {}\r\n
+\r\n
+    public static SingletonThree getInstance() {\r\n
+\r\n
+        if (s == null) {\r\n
+            synchronized (SingletonThree.class) {\r\n
+                if (s == null) {\r\n
+                    s = new SingletonThree();\r\n
+                }\r\n
+            }\r\n
+        }\r\n
+        return s;\r\n
+    }\r\n
+}
+
+"/><TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#3f9"
+                android:textSize="15dp"
+                android:text="推荐\r\n
+                单例设计模式————静态内部类\r\n
+优点：在需要的时候才进行初始化，延迟加载，防止消耗不必要的资源，线程安全
+
+\r\n
+public class SingletonFour {\r\n
+    \r\n
+    private SingletonFour() {\r\n
+    }\r\n
+\r\n
+    public static SingletonFour getInstance() {\r\n
+        return SingletonHolder.s;\r\n
+    }\r\n
+\r\n
+    private static class SingletonHolder {\r\n
+        private static final SingletonFour s = new SingletonFour();\r\n
+    }\r\n
+}
+
+
+"/>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>
