@@ -1,1 +1,1 @@
-include ':GlideDemo', ':ServiceDemo', ':DownLoadDemo', ':MaterialTest', ':myapplication', ':LambdaTest', ':DesignPatternsDemo'
+include ':GlideDemo', ':ServiceDemo', ':DownLoadDemo', ':MaterialTest', ':myapplication', ':LambdaTest', ':DesignPatternsDemo', ':viewdemo'

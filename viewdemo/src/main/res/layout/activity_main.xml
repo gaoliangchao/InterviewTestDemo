@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/activity_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.gavin.glc.component.viewdemo.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#fcb">
+
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/view_one"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="#ff4c4b"
+            android:gravity="center"
+            android:text="view_one"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#fbc">
+
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/view_two"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="#ff4c4b"
+            android:gravity="center"
+            android:text="view_two"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="myScrollTo"
+            android:text="scrollTo"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="myScrollBy"
+            android:text="scrollBy"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="reset"
+            android:text="reset"
+            />
+    </LinearLayout>
+</LinearLayout>

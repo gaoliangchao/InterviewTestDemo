@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.gavin.glc.component.designpatternsdemo.FactoryPattern.FactoryActivity;
 import com.gavin.glc.component.designpatternsdemo.SingletonPattern.SingletonActivity;
 
 import java.util.ArrayList;
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<DetailItem> initList() {
         ArrayList<DetailItem> arrayList = new ArrayList<>();
         arrayList.add(new DetailItem("单例模式", SingletonActivity.class));
+        arrayList.add(new DetailItem("工厂模式", FactoryActivity.class));
         return arrayList;
     }
 

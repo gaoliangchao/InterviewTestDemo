@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.gavin.glc.component.designpatternsdemo"
+<manifest package="com.gavin.glc.component.viewdemo"
           xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
@@ -9,15 +9,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+        </activity>
+        <activity android:name=".TouchActivity">
+
+        </activity>
+        <activity android:name="com.gavin.glc.component.dispatchTest.DispatchActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity>
-        <activity android:name=".SingletonPattern.SingletonActivity">
-        </activity>
-        <activity android:name=".FactoryPattern.FactoryActivity">
         </activity>
     </application>
 
