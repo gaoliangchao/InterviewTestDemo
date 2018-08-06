@@ -17,7 +17,8 @@
         </activity>
 
         <receiver
-            android:name=".StaticBroadCast">
+            android:name=".StaticBroadCast"
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.gavin.glc.component.componentdemo.static.action"/>
             </intent-filter>

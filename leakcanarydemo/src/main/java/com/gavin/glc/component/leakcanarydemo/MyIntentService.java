@@ -2,6 +2,7 @@ package com.gavin.glc.component.leakcanarydemo;
 
 import android.app.IntentService;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.SystemClock;
 import android.util.Log;
 
@@ -22,6 +23,7 @@ public class MyIntentService extends IntentService {
      */
     public MyIntentService() {
         super("MyIntentService");
+        AsyncTask
 
     }
 
